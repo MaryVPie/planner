@@ -36,6 +36,11 @@ textarea {
   border: 1px solid black;
 }
 
+.columnBorder {
+
+  border-right: 1px solid black;
+}
+
 .hour {
   background-color: #ffffff;
   color: #000000;
@@ -68,4 +73,12 @@ textarea {
 .saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
+}
+
+.hoursCalendar {
+
+  margin: auto;
+  width: 80%;
+  padding: 5px;
+
 }
