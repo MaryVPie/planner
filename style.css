@@ -31,8 +31,8 @@ textarea {
 }
 
 .row {
-  white-space: pre-wrap;
-  height: 80px;
+  /* white-space: pre-wrap; */
+  min-height: 80px;
   border: 1px solid black;
 }
 
@@ -75,10 +75,41 @@ textarea {
   transition: all 0.3s ease-in-out;
 }
 
+.save-btn {
+
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+
+}
+
 .hoursCalendar {
 
   margin: auto;
   width: 80%;
   padding: 5px;
 
+}
+
+.hidden {
+  display: none;
+}
+
+.textPlan {
+
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.no-padding {
+  padding: 0;
+  margin: 0;
+}
+
+.stretch {
+  width: 100%;
+  height: 100%;
 }
