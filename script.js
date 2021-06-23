@@ -10,56 +10,56 @@ headerDate();
 var rowsPlanner= [
     {
         id: 1,
-        wasPassed: false,
-        text: "9 AM"
+        text: "9 AM",
+        hour: 9,
     },
     
     {
         id: 2,
-        wasPassed: false,
-        text: "10 AM"
+        text: "10 AM",
+        hour: 10,
     },
 
     {
         id: 3,
-        wasPassed: false,
-        text: "11 AM"
+        text: "11 AM",
+        hour: 11,
     },
 
     {
         id: 4,
-        wasPassed: false,
-        text: "12 PM"
+        text: "12 PM",
+        hour: 12,
     },
 
     {
         id: 5,
-        wasPassed: false,
-        text: "1 PM"
+        text: "1 PM",
+        hour: 13,
     },
 
     {
         id: 6,
-        wasPassed: false,
-        text: "2 PM"
+        text: "2 PM",
+        hour: 14,
     },
 
     {
         id: 7,
-        wasPassed: false,
-        text: "3 PM"
+        text: "3 PM",
+        hour: 15,
     },
 
     {
         id: 8,
-        wasPassed: false,
-        text: "4 PM"
+        text: "4 PM",
+        hour: 16,
     },
 
     {
         id: 9,
-        wasPassed: false,
-        text: "5 PM"
+        text: "5 PM",
+        hour: 17,
     }
 ]
 
@@ -77,7 +77,21 @@ for (let idx = 0; idx < rowsPlanner.length; idx++) {
     // puts time in column 1. 
     $("div:first-child", threeColumnsTable$).html(rowData.text);
 
-    $("input", threeColumnsTable$).addClass("future");
+    //$("input", threeColumnsTable$).addClass("future");
+
+    var currentHour = moment().hour();
+    //debugger;
+    if (currentHour > rowData.hour) {
+        $("input", threeColumnsTable$).addClass("past");
+        $("input", threeColumnsTable$).attr('readonly', 'readonly');
+        $("button", threeColumnsTable$).attr('disabled', true);
+    } 
+    if (currentHour == rowData.hour) {
+        $("input", threeColumnsTable$).addClass("present"); 
+    }
+    if (currentHour < rowData.hour) {
+        $("input", threeColumnsTable$).addClass("future"); 
+    }
 
 
     // adds cloned row at the end of container
@@ -87,7 +101,7 @@ for (let idx = 0; idx < rowsPlanner.length; idx++) {
 //saves time and text
 function savings() {
 
-    debugger;
+    
     let textRow = document.querySelector("#myText");
 
     const textEvent = {
