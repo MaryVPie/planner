@@ -63,9 +63,7 @@ var rowsPlanner= [
     }
 ]
 
-
-
-//clonnig and adding new rows with different id
+//clone and adding new rows with different id
 for (let idx = 0; idx < rowsPlanner.length; idx++) {
     const rowData = rowsPlanner[idx];
 
@@ -73,13 +71,13 @@ for (let idx = 0; idx < rowsPlanner.length; idx++) {
 
     threeColumnsTable$.attr("id", rowData.id);
 
-//   threeColumnsTable$ how to remove class jquery
+    //threeColumnsTable$ how to remove class jquery
     threeColumnsTable$.removeClass("hidden");
     
     // puts time in column 1. 
     $("div:first-child", threeColumnsTable$).html(rowData.text);
 
-    $("div:nth-child(2)", threeColumnsTable$).addClass("future");
+    $("input", threeColumnsTable$).addClass("future");
 
 
     // adds cloned row at the end of container
@@ -97,13 +95,12 @@ function savings() {
         planForTime: textRow.value
     };
 
-    let K = time + textEvent.planForTime;
-    window.localStorage.setItem(K, JSON.stringify(textEvent));
+    let K = textEvent.time + textEvent.planForTime;
+    localStorage.setItem(K, JSON.stringify(textEvent));
 
     const timeT = localStorage.getItem(K);
     console.log(JSON.parse(timeT));
     console.log(textEvent);
-
      
 }
 
