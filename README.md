@@ -22,8 +22,9 @@ SO THAT I can manage my time effectively
 
 
 
-## Links to Review
+## Feature and Links to Review
 
+You can use refresh button or it will automatically update. We check if update is needed every half an hour starting from the first page load.
 
 * The URL of the deployed application: https://maryvpie.github.io/planner/
 
