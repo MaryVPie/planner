@@ -14,8 +14,7 @@ SO THAT I can manage my time effectively
 
 
 
-
-|<img src="" width="450" height="550" alt="Homepage"/>| ![A user clicks on slots on the color-coded calendar and edits the events.](./Assets/05-third-party-apis-homework-demo.gif)|
+|<img src=".\Images\Planner.PNG" width="400" height="450" alt="Homepage"/>| ![A user clicks on slots on the color-coded calendar and edits the events.](./Assets/05-third-party-apis-homework-demo.gif)|
 | --- | --- |
 |  Work done | Mockup |
 
